@@ -1,0 +1,2 @@
+ma.emsi.bdccioc.ext.DaoImplV2
+ma.emsi.bdccioc.metier.MetierImpl
