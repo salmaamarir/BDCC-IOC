@@ -1,16 +1,20 @@
 # TP : Inversion de Contrôle et Injection de Dépendances
 **Réalisé par : Salma Amarir**
 
-## Description
-Ce projet illustre les concepts de couplage faible et d'injection de dépendances (IoC) en utilisant le langage Java et le Framework Spring.
+## 📝 Description
+Ce projet illustre les concepts de **couplage faible** et d'**injection de dépendances (IoC)** en utilisant Java et le Framework Spring. L'objectif est de montrer comment séparer la logique métier de l'accès aux données.
 
-## Structure
-- `dao` : Interface de données et implémentation standard.
-- `metier` : Logique métier utilisant l'interface `IDao`.
-- `ext` : Extension du projet (nouvelle implémentation de `IDao`).
-- `pres` : Classes de test (Statique, Dynamique, Spring XML et Annotations).
+## 📂 Structure du Projet
+Le projet est organisé en plusieurs packages :
+- **`dao`** : Contient l'interface `IDao` et son implémentation standard.
+- **`metier`** : Contient la logique métier via l'interface `IMetier` (utilise `IDao`).
+- **`ext`** : Nouvelle implémentation de `IDao` (ex: Capteurs) pour démontrer l'extensibilité.
+- **`pres`** : Classes de présentation pour tester les différentes méthodes d'injection :
+    - Version Statique (Instanciation directe).
+    - Version Dynamique (Chargement par `Class.forName`).
+    - Version Spring (Configuration via XML et Annotations).
 
-## Résultats
-L'exécution de `PresSpringAnnotation.java` affiche :
-- L'appel à la version choisie (standard ou capteurs).
-- Le résultat du calcul métier après injection automatique par Spring.
+## 🚀 Installation et Exécution
+1. Cloner le projet :
+   ```bash
+git clone https://github.com/salmaamarir/BDCC-IOC.git
